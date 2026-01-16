@@ -1,209 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Madhwa Carnival</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madhwa Carnival</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  color: #fff;
-  overflow-x: hidden;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+        url("af4bf2fd01566517ca377633e65cdb3c.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
 
-/* 🌈 ANIMATED COLORFUL BACKGROUND */
-.background {
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    #ff9a9e,
-    #fad0c4,
-    #fbc2eb,
-    #a6c1ee,
-    #fddb92,
-    #d1fdff
-  );
-  background-size: 400% 400%;
-  animation: gradientMove 18s ease infinite;
-  z-index: -3;
-}
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
 
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+    header h1 {
+      font-size: 3rem;
+      color: #ffd36e;
+      animation: glow 2s infinite alternate;
+    }
 
-/* ✨ FLOATING FESTIVE PARTICLES */
-.particles span {
-  position: fixed;
-  bottom: -50px;
-  width: 14px;
-  height: 14px;
-  background: radial-gradient(circle, #fff7b2, #ff9800);
-  border-radius: 50%;
-  animation: floatUp 10s linear infinite;
-  opacity: 0.8;
-}
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffd36e; }
+      to { text-shadow: 0 0 25px #ffae00; }
+    }
 
-@keyframes floatUp {
-  0% { transform: translateY(0) scale(1); opacity: 0; }
-  20% { opacity: 1; }
-  100% { transform: translateY(-110vh) scale(1.4); opacity: 0; }
-}
+    header p {
+      max-width: 800px;
+      margin: 20px auto 0;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
 
-/* HEADER */
-header {
-  padding: 90px 16px 70px;
-  text-align: center;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      background: rgba(0,0,0,0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-header h1 {
-  font-size: clamp(2.6rem, 6vw, 4rem);
-  color: #5a2d0c;
-  text-shadow: 0 6px 20px rgba(255,255,255,0.6);
-}
+    nav a {
+      color: #ffd36e;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
 
-header p {
-  max-width: 900px;
-  margin: 20px auto 0;
-  font-size: 1.1rem;
-  color: #3b1e0b;
-}
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-/* NAV */
-nav {
-  position: sticky;
-  top: 0;
-  background: rgba(255,255,255,0.65);
-  backdrop-filter: blur(12px);
-  padding: 14px;
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  z-index: 10;
-}
+    h2 {
+      text-align: center;
+      color: #ffd36e;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
 
-nav a {
-  text-decoration: none;
-  color: #5a2d0c;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
+    .card {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(6px);
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
 
-/* SECTIONS */
-section {
-  padding: 80px 16px;
-  max-width: 1100px;
-  margin: auto;
-}
+    ul li {
+      margin: 10px 0;
+    }
 
-.section-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 30px;
-}
+    .registrations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-.section-title h2 {
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  color: #5a2d0c;
-}
+    .reg-box {
+      background: rgba(255,255,255,0.15);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+    }
 
-.diya {
-  width: 20px;
-  height: 20px;
-  background: radial-gradient(circle, #fff5c3, #ff9800);
-  border-radius: 50%;
-  animation: flicker 1.8s infinite;
-}
+    .reg-box h3 {
+      color: #ffd36e;
+      margin-bottom: 10px;
+    }
 
-@keyframes flicker {
-  0% { transform: scale(1); opacity: 0.7; }
-  50% { transform: scale(1.3); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.8; }
-}
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.6);
+    }
 
-/* CARDS */
-.card {
-  background: rgba(255,255,255,0.75);
-  color: #3b1e0b;
-  border-radius: 20px;
-  padding: 28px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
-}
+    footer a {
+      color: #ffd36e;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-ul li {
-  margin-bottom: 10px;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 12px 28px;
-  background: #ffb703;
-  color: #3b1e0b;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-}
-
-/* FAQ */
-details {
-  background: rgba(255,255,255,0.75);
-  color: #3b1e0b;
-  padding: 18px;
-  border-radius: 14px;
-  margin-bottom: 12px;
-  cursor: pointer;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 50px 16px;
-  background: rgba(255,255,255,0.7);
-  color: #3b1e0b;
-}
-</style>
+    /* MOBILE FIX */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="background"></div>
-
-<div class="particles">
-  <span style="left:10%; animation-delay:0s"></span>
-  <span style="left:30%; animation-delay:3s"></span>
-  <span style="left:50%; animation-delay:6s"></span>
-  <span style="left:70%; animation-delay:2s"></span>
-  <span style="left:90%; animation-delay:5s"></span>
-</div>
-
 <header>
   <h1>Madhwa Carnival</h1>
   <p>
-    A New Year’s Spiritual & Cultural Carnival inviting the Madhwa community
-    to celebrate talent, devotion, creativity, and togetherness in a joyful evening.
+    A New Year’s Spiritual & Cultural Carnival bringing together the Madhwa community
+    to celebrate devotion, creativity, unity, and joy in a beautiful evening setting.
   </p>
 </header>
 
@@ -213,70 +143,78 @@ footer {
   <a href="#flow">Event Flow</a>
   <a href="#register">Registrations</a>
   <a href="#faq">FAQs</a>
-  <a href="#connect">Stay Connected</a>
 </nav>
 
 <section id="about">
-  <div class="section-title"><div class="diya"></div><h2>About</h2><div class="diya"></div></div>
+  <h2>About Madhwa Carnival</h2>
   <div class="card">
-    Madhwa Carnival is a New Year spiritual evening celebration where children,
-    youth, and families come together to perform, create, interact, and celebrate
-    community bonding through culture and joy.
+    Madhwa Carnival is a thoughtfully curated New Year spiritual carnival designed
+    to unite the Madhwa community in an atmosphere of positivity, joy, and shared celebration.
   </div>
 </section>
 
 <section id="participate">
-  <div class="section-title"><div class="diya"></div><h2>Who Can Participate</h2><div class="diya"></div></div>
+  <h2>Who Can Participate</h2>
   <div class="card">
     <ul>
-      <li>Age group: <strong>3 to 35 years</strong></li>
-      <li>Individuals & groups welcome</li>
-      <li>Performers, stall owners & volunteers</li>
+      <li>Open to all age groups from <strong>3 to 35 years</strong></li>
+      <li>Children, youth, individuals & groups welcome</li>
+      <li>Open mic cultural performances & stalls</li>
       <li>No prior experience required</li>
     </ul>
   </div>
 </section>
 
 <section id="flow">
-  <div class="section-title"><div class="diya"></div><h2>Event Flow</h2><div class="diya"></div></div>
+  <h2>Event Flow</h2>
   <div class="card">
     <ul>
       <li>Inauguration Ceremony</li>
-      <li>Open Mic Cultural Performances</li>
+      <li>Open Mic Cultural Programs</li>
       <li>Music, Dance, Drama & Storytelling</li>
-      <li>Creative & Cultural Stalls</li>
-      <li>Community Interaction & Celebration</li>
+      <li>Creative, Cultural & Food Stalls</li>
+      <li>Community Celebration</li>
     </ul>
   </div>
 </section>
 
 <section id="register">
-  <div class="section-title"><div class="diya"></div><h2>Registrations</h2><div class="diya"></div></div>
-  <div class="grid">
-    <div class="card"><h3>Participant Registration</h3><a class="btn" href="#">Register</a></div>
-    <div class="card"><h3>Stall Registration</h3><a class="btn" href="#">Register</a></div>
-    <div class="card"><h3>Volunteer Registration</h3><a class="btn" href="#">Register</a></div>
+  <h2>Registrations</h2>
+  <div class="registrations">
+    <div class="reg-box">
+      <h3>Participant Registration</h3>
+      (Google Form coming soon)
+    </div>
+    <div class="reg-box">
+      <h3>Stall Registration</h3>
+      (Google Form coming soon)
+    </div>
+    <div class="reg-box">
+      <h3>Volunteer Registration</h3>
+      (Google Form coming soon)
+    </div>
   </div>
 </section>
 
 <section id="faq">
-  <div class="section-title"><div class="diya"></div><h2>FAQs</h2><div class="diya"></div></div>
-  <details><summary>Is this event only in the evening?</summary>Yes, it is an evening-only celebration.</details>
-  <details><summary>Is there any registration fee?</summary>Details will be shared in the registration form.</details>
-  <details><summary>Can groups participate?</summary>Yes, both individuals and groups are welcome.</details>
-  <details><summary>Can I host a stall?</summary>Yes, stall registration is available separately.</details>
-  <details><summary>Is this open to all Madhwa families?</summary>Yes, everyone is welcome.</details>
-</section>
-
-<section id="connect">
-  <div class="section-title"><div class="diya"></div><h2>Stay Connected</h2><div class="diya"></div></div>
-  <div class="card" style="text-align:center;">
-    <a class="btn" href="https://www.instagram.com/yuvatma_mysuru/" target="_blank">Instagram</a>
+  <h2>FAQs</h2>
+  <div class="card">
+    <ul>
+      <li>Is this event only in the evening? → Yes</li>
+      <li>Is it free to attend? → Details will be shared</li>
+      <li>Can families attend together? → Absolutely</li>
+      <li>Can I host a stall? → Yes, register separately</li>
+      <li>Do I need prior experience? → Not required</li>
+    </ul>
   </div>
 </section>
 
 <footer>
-  Madhwa Carnival • New Year Spiritual Celebration
+  Stay Connected on Instagram:
+  <br />
+  <a href="https://instagram.com/yuvatma_mysuru" target="_blank">
+    @yuvatma_mysuru
+  </a>
 </footer>
 
 </body>
