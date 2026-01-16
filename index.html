@@ -1,141 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Madhwa Carnival</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madhwa Carnival</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-body{
-  font-family:'Poppins',sans-serif;
-  color:#fff;
-  background:
-    linear-gradient(
-      rgba(12,18,28,0.65),
-      rgba(25,15,10,0.75)
-    ),
-    url("https://raw.githubusercontent.com/jahnaviinamdar/Madhwa-Carnival/main/6958205adf42a9e5ad93ada153fde6a0.jpg")
-    no-repeat center center fixed;
-  background-size:cover;
-}
+    body {
+      background: linear-gradient(to bottom, #3a2f4f, #4b355f);
+      color: #fff;
+      line-height: 1.6;
+    }
 
-/* HEADER */
-header{
-  text-align:center;
-  padding:80px 20px 45px;
-}
+    header {
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
 
-header h1{
-  font-size:3rem;
-  color:#f6c56b;
-  letter-spacing:1px;
-  margin-bottom:10px;
-  text-shadow:0 4px 18px rgba(246,197,107,0.4);
-}
+    header h1 {
+      font-size: 3rem;
+      color: #ffd369;
+      margin-bottom: 10px;
+    }
 
-header p{
-  max-width:820px;
-  margin:0 auto;
-  font-size:1.05rem;
-  opacity:0.95;
-}
+    header p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1rem;
+      color: #f1f1f1;
+    }
 
-/* NAV */
-nav{
-  position:sticky;
-  top:0;
-  background:rgba(10,10,10,0.55);
-  backdrop-filter:blur(6px);
-  display:flex;
-  justify-content:center;
-  gap:18px;
-  padding:12px;
-  z-index:10;
-}
+    nav {
+      margin-top: 20px;
+    }
 
-nav a{
-  color:#f6c56b;
-  text-decoration:none;
-  font-size:0.9rem;
-}
+    nav a {
+      color: #ffd369;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 0.9rem;
+    }
 
-/* SECTIONS */
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:55px 20px;
-}
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
 
-h2{
-  text-align:center;
-  font-size:1.9rem;
-  color:#f6c56b;
-  margin-bottom:18px; /* reduced spacing */
-}
+    h2 {
+      color: #ffd369;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
 
-.card{
-  background:rgba(255,255,255,0.14);
-  backdrop-filter:blur(7px);
-  border-radius:14px;
-  padding:22px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.25);
-}
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
 
-ul li{
-  margin:8px 0;
-  font-size:0.95rem;
-}
+    ul {
+      padding-left: 20px;
+    }
 
-/* REGISTRATIONS */
-.registrations{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:18px;
-}
+    ul li {
+      margin-bottom: 8px;
+    }
 
-.reg-box{
-  background:rgba(255,255,255,0.16);
-  padding:22px;
-  border-radius:14px;
-  text-align:center;
-}
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
 
-.reg-box h3{
-  color:#ffd98e;
-  margin-bottom:8px;
-}
+    .buttons a {
+      background: #ffd369;
+      color: #3a2f4f;
+      padding: 12px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-/* FOOTER */
-footer{
-  background:rgba(0,0,0,0.6);
-  text-align:center;
-  padding:35px 20px;
-}
+    .buttons a:hover {
+      background: #ffefaa;
+    }
 
-footer a{
-  color:#ffd98e;
-  font-weight:600;
-  text-decoration:none;
-}
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
 
-/* MOBILE */
-@media(max-width:600px){
-  header h1{
-    font-size:2.2rem;
-  }
-  section{
-    padding:45px 16px;
-  }
-}
-</style>
+    footer a {
+      color: #ffd369;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -144,35 +130,38 @@ footer a{
   <h1>Madhwa Carnival</h1>
   <p>
     A New Year’s Spiritual & Cultural Carnival bringing together the Madhwa community
-    to celebrate devotion, creativity, unity, and joy in a beautiful evening setting.
+    to celebrate devotion, creativity, talent, and togetherness in a joyful evening.
   </p>
-</header>
 
-<nav>
-  <a href="#about">Home</a>
-  <a href="#participate">Participation</a>
-  <a href="#flow">Event Flow</a>
-  <a href="#register">Registrations</a>
-  <a href="#faq">FAQs</a>
-</nav>
+  <nav>
+    <a href="#about">Home</a>
+    <a href="#who">Who Can Participate</a>
+    <a href="#flow">Event Flow</a>
+    <a href="#register">Registrations</a>
+    <a href="#faq">FAQs</a>
+    <a href="#connect">Stay Connected</a>
+  </nav>
+</header>
 
 <section id="about">
   <h2>About Madhwa Carnival</h2>
   <div class="card">
-    Madhwa Carnival is a New Year spiritual and cultural gathering created to bring
-    together children, youth, and families from the Madhwa community in an atmosphere
-    of positivity, devotion, creativity, and togetherness.
+    Madhwa Carnival is a thoughtfully curated New Year spiritual gathering designed
+    to bring families, children, and youth together in a warm, inclusive, and festive atmosphere.
+    <br><br>
+    It is an evening celebration focused on cultural expression, creativity, devotion,
+    and community bonding.
   </div>
 </section>
 
-<section id="participate">
+<section id="who">
   <h2>Who Can Participate</h2>
   <div class="card">
     <ul>
-      <li>Open to all age groups from <strong>3 to 35 years</strong></li>
-      <li>Individuals, groups, and families welcome</li>
-      <li>Open mic cultural programs and stalls</li>
-      <li>No prior experience required</li>
+      <li>Open to all age groups from <b>3 to 35 years</b></li>
+      <li>Children, youth, individuals, and groups are welcome</li>
+      <li>Participants can perform, volunteer, or host stalls</li>
+      <li>No prior experience required — enthusiasm matters most</li>
     </ul>
   </div>
 </section>
@@ -185,26 +174,25 @@ footer a{
       <li>Open Mic Cultural Performances</li>
       <li>Music, Dance, Drama & Storytelling</li>
       <li>Creative, Cultural & Food Stalls</li>
-      <li>Community Celebration</li>
+      <li>Community Interaction & Celebration</li>
     </ul>
   </div>
 </section>
 
 <section id="register">
   <h2>Registrations</h2>
-  <div class="registrations">
-    <div class="reg-box">
-      <h3>Participant Registration</h3>
-      Google Form coming soon
-    </div>
-    <div class="reg-box">
-      <h3>Stall Registration</h3>
-      Google Form coming soon
-    </div>
-    <div class="reg-box">
-      <h3>Volunteer Registration</h3>
-      Google Form coming soon
-    </div>
+  <div class="buttons">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAZ39L6lvabxA70vfLQzNJN9Om_RH3Yx0MHUuujHsNtEwrPw/viewform?usp=publish-editor" target="_blank">
+      🎤 Open Mic Registration
+    </a>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScO77ZwIaBMeTtiTgUQOxQETeYttMxxGLX8mBF8ILROaBZmqQ/viewform?usp=publish-editor" target="_blank">
+      🏪 Stall Registration
+    </a>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScdICg61xm-LIAGzE5LGZC4Ud0ACHJXUrxd4xhOR_L3chblTg/viewform?usp=publish-editor" target="_blank">
+      🤝 Volunteer Registration
+    </a>
   </div>
 </section>
 
@@ -212,20 +200,27 @@ footer a{
   <h2>FAQs</h2>
   <div class="card">
     <ul>
-      <li>Is the event only in the evening? → Yes</li>
-      <li>Is it suitable for families? → Absolutely</li>
-      <li>Can I host a stall? → Yes</li>
-      <li>Do I need experience? → Not required</li>
-      <li>Is this a New Year spiritual gathering? → Yes</li>
+      <li><b>Is this a full-day event?</b> – No, this is an evening celebration.</li>
+      <li><b>Can groups perform?</b> – Yes, both solo and group performances are welcome.</li>
+      <li><b>Is there any registration fee?</b> – Details will be communicated later.</li>
+      <li><b>Are food restrictions applicable?</b> – Yes. No onion and no garlic are allowed.</li>
+      <li><b>Will children be supervised?</b> – Yes, volunteers will assist throughout.</li>
     </ul>
   </div>
 </section>
 
+<section id="connect">
+  <h2>Stay Connected</h2>
+  <div class="card" style="text-align:center;">
+    Follow us on Instagram for updates & announcements<br><br>
+    <a href="https://www.instagram.com/yuvatma_mysuru/" target="_blank">
+      @yuvatma_mysuru
+    </a>
+  </div>
+</section>
+
 <footer>
-  Stay Connected on Instagram<br>
-  <a href="https://instagram.com/yuvatma_mysuru" target="_blank">
-    @yuvatma_mysuru
-  </a>
+  © Madhwa Carnival • New Year Spiritual & Cultural Celebration
 </footer>
 
 </body>
