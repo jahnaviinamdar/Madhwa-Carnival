@@ -15,45 +15,69 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* -------- BACKGROUND FIX (MOBILE SAFE) -------- */
+/* ---------- BACKGROUND LAYER FIX ---------- */
 body {
-  background: linear-gradient(
-      rgba(18, 10, 28, 0.85),
-      rgba(18, 10, 28, 0.9)
-    ),
-    url("https://images.unsplash.com/photo-1623074077994-1e5b9dfcc8a6?auto=format&fit=crop&w=2000&q=80");
+  position: relative;
+  color: #ffffff;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* REAL BACKGROUND IMAGE */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    url("https://images.unsplash.com/photo-1604147706283-0a09f6d2d3b8?auto=format&fit=crop&w=2000&q=80");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #ffffff;
-  line-height: 1.7;
+  z-index: -2;
 }
 
-/* -------- HEADER -------- */
+/* LIGHT COLOR OVERLAY (NOT DARK) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    rgba(255, 220, 150, 0.45),
+    rgba(80, 40, 100, 0.55)
+  );
+  z-index: -1;
+}
+
+/* ---------- HEADER ---------- */
 header {
   text-align: center;
   padding: 90px 16px 60px;
 }
 
 header h1 {
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
   color: #ffd36a;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
 
 header p {
-  margin-top: 14px;
+  margin-top: 16px;
   font-size: 1.05rem;
-  max-width: 800px;
+  max-width: 850px;
   margin-inline: auto;
-  color: #f1f1f1;
+  color: #ffffff;
 }
 
-/* -------- NAV -------- */
+/* ---------- NAV ---------- */
 nav {
   position: sticky;
   top: 0;
-  background: rgba(0,0,0,0.65);
+  background: rgba(40,20,60,0.75);
   backdrop-filter: blur(10px);
   display: flex;
   flex-wrap: wrap;
@@ -69,14 +93,14 @@ nav a {
   font-size: 0.9rem;
 }
 
-/* -------- SECTIONS -------- */
+/* ---------- SECTIONS ---------- */
 section {
   padding: 70px 16px;
   max-width: 1000px;
   margin: auto;
 }
 
-/* -------- HEADING WITH DIYAS -------- */
+/* ---------- HEADING WITH DIYAS ---------- */
 .section-title {
   display: flex;
   justify-content: center;
@@ -86,30 +110,31 @@ section {
 }
 
 .section-title h2 {
-  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
   color: #ffd36a;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.4);
 }
 
 .diya {
   width: 18px;
   height: 18px;
-  background: radial-gradient(circle, #ffd36a 30%, #ff9f1a 70%);
+  background: radial-gradient(circle, #fff2b0 30%, #ff9800 70%);
   border-radius: 50%;
-  animation: flicker 2s infinite ease-in-out;
+  animation: flicker 1.8s infinite ease-in-out;
 }
 
 @keyframes flicker {
   0% { transform: scale(1); opacity: 0.7; }
-  50% { transform: scale(1.2); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 1; }
   100% { transform: scale(1); opacity: 0.8; }
 }
 
-/* -------- CARDS -------- */
+/* ---------- CARDS ---------- */
 .card {
-  background: rgba(255,255,255,0.14);
-  border-radius: 16px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 18px;
   padding: 28px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.35);
 }
 
 ul {
@@ -120,7 +145,7 @@ ul li {
   margin-bottom: 10px;
 }
 
-/* -------- GRID -------- */
+/* ---------- GRID ---------- */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -130,24 +155,24 @@ ul li {
 .btn {
   display: inline-block;
   margin-top: 14px;
-  padding: 12px 24px;
+  padding: 12px 26px;
   background: #ffd36a;
-  color: #2c1a0f;
+  color: #3a220f;
   text-decoration: none;
-  border-radius: 24px;
+  border-radius: 30px;
   font-weight: 600;
   font-size: 0.9rem;
 }
 
-/* -------- FOOTER -------- */
+/* ---------- FOOTER ---------- */
 footer {
   text-align: center;
   padding: 50px 16px;
-  background: rgba(0,0,0,0.75);
+  background: rgba(30,10,40,0.8);
   margin-top: 80px;
 }
 
-/* -------- MOBILE TWEAKS -------- */
+/* ---------- MOBILE ---------- */
 @media (max-width: 600px) {
   header {
     padding-top: 70px;
@@ -165,7 +190,7 @@ footer {
   <h1>Madhwa Carnival</h1>
   <p>
     A New Year’s Spiritual & Cultural Carnival bringing together the Madhwa community
-    to celebrate talent, devotion, creativity, and togetherness in a beautiful evening.
+    to celebrate talent, devotion, creativity, and togetherness in a joyful evening.
   </p>
 </header>
 
@@ -184,7 +209,7 @@ footer {
   </div>
   <div class="card">
     Madhwa Carnival is a New Year spiritual evening celebration created to reconnect,
-    express creativity, and celebrate community through culture, art, and joy.
+    express creativity, and celebrate community through culture and joy.
   </div>
 </section>
 
@@ -195,9 +220,9 @@ footer {
   <div class="card">
     <ul>
       <li>Age group: <strong>3 to 35 years</strong></li>
-      <li>Open to individuals and groups</li>
+      <li>Individuals & groups welcome</li>
       <li>Perform, volunteer, or host stalls</li>
-      <li>No experience required</li>
+      <li>No prior experience required</li>
     </ul>
   </div>
 </section>
@@ -220,29 +245,10 @@ footer {
   <div class="section-title">
     <div class="diya"></div><h2>Registrations</h2><div class="diya"></div>
   </div>
-
   <div class="grid">
-    <div class="card">
-      <h3>Participant Registration</h3>
-      <a class="btn" href="#">Register</a>
-    </div>
-    <div class="card">
-      <h3>Stall Registration</h3>
-      <a class="btn" href="#">Register</a>
-    </div>
-    <div class="card">
-      <h3>Volunteer Registration</h3>
-      <a class="btn" href="#">Register</a>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="section-title">
-    <div class="diya"></div><h2>FAQs</h2><div class="diya"></div>
-  </div>
-  <div class="card">
-    Evening-only event • Open to all Madhwa community members
+    <div class="card"><h3>Participant Registration</h3><a class="btn" href="#">Register</a></div>
+    <div class="card"><h3>Stall Registration</h3><a class="btn" href="#">Register</a></div>
+    <div class="card"><h3>Volunteer Registration</h3><a class="btn" href="#">Register</a></div>
   </div>
 </section>
 
@@ -251,9 +257,7 @@ footer {
     <div class="diya"></div><h2>Stay Connected</h2><div class="diya"></div>
   </div>
   <div class="card" style="text-align:center;">
-    <a class="btn" href="https://www.instagram.com/yuvatma_mysuru/" target="_blank">
-      Instagram
-    </a>
+    <a class="btn" href="https://www.instagram.com/yuvatma_mysuru/" target="_blank">Instagram</a>
   </div>
 </section>
 
