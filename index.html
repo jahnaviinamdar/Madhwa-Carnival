@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Madhwa Carnival | Yuvatma Mysuru</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fff6e9;
+      color: #2a1a0f;
+    }
+
+    /* ================= HERO ================= */
+    header {
+      background:
+        linear-gradient(rgba(30,10,0,0.6), rgba(30,10,0,0.8)),
+        url('https://images.unsplash.com/photo-1600275669283-4bf3d0f2f9d4');
+      background-size: cover;
+      background-position: center;
+      color: #fff5dc;
+      padding: 150px 20px 120px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 58px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    header h3 {
+      font-weight: 400;
+      font-size: 22px;
+      color: #ffd28a;
+      margin-bottom: 25px;
+    }
+
+    header .tagline {
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 2px solid #ffd28a;
+      display: inline-block;
+      padding: 10px 26px;
+      border-radius: 40px;
+    }
+
+    /* ================= DIYAS ================= */
+    .diya {
+      position: absolute;
+      bottom: -20px;
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle, #ffd27d 20%, #ff8c00 60%, transparent 70%);
+      border-radius: 50%;
+      animation: flicker 2.5s infinite ease-in-out;
+      opacity: 0.9;
+    }
+
+    .diya:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .diya:nth-child(2) { left: 25%; animation-delay: 0.5s; }
+    .diya:nth-child(3) { left: 50%; animation-delay: 1s; }
+    .diya:nth-child(4) { left: 75%; animation-delay: 0.3s; }
+    .diya:nth-child(5) { left: 90%; animation-delay: 0.8s; }
+
+    @keyframes flicker {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.85; }
+    }
+
+    /* ================= NAV ================= */
+    nav {
+      background: #2a1208;
+      padding: 14px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #ffdda1;
+      margin: 0 16px;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    section {
+      padding: 95px 20px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      color: #9c2f0a;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .caption {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 45px;
+      font-size: 17px;
+      color: #5c3a28;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 42px;
+      border-radius: 24px;
+      box-shadow: 0 22px 50px rgba(0,0,0,0.12);
+      margin-bottom: 35px;
+    }
+
+    .evening {
+      background: linear-gradient(135deg, #3b1d0f, #6f2c14);
+      color: #ffe6b3;
+      border-radius: 28px;
+      padding: 55px;
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 15px 34px;
+      background: linear-gradient(135deg, #ff9f43, #c0392b);
+      color: white;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* ================= GALLERY ================= */
+    .image-block {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .image-card {
+      text-align: center;
+    }
+
+    .image-card img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+    }
+
+    .image-card p {
+      margin-top: 14px;
+      font-size: 15px;
+      color: #6b3f2a;
+    }
+
+    footer {
+      background: #1b0c06;
+      color: #f6d28b;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    footer em {
+      display: block;
+      margin-top: 14px;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>MADHWA CARNIVAL</h1>
+  <h3>An evening of devotion, culture & community celebration</h3>
+  <div class="tagline">Organised by Yuvatma Mysuru</div>
+
+  <!-- Animated Diyas -->
+  <div class="diya"></div>
+  <div class="diya"></div>
+  <div class="diya"></div>
+  <div class="diya"></div>
+  <div class="diya"></div>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#evening">Evening Flow</a>
+  <a href="#participate">Participate</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Connect</a>
+</nav>
+
+<section id="about">
+  <h2>About the Carnival</h2>
+  <p class="caption">
+    A thoughtfully curated evening festival inspired by temple traditions,
+    youthful energy and community togetherness.
+  </p>
+  <div class="card">
+    Madhwa Carnival is not a stage-only event — it is a **shared experience**.
+    <br><br>
+    As lamps glow and music flows, children perform with confidence,
+    families reconnect, stories are exchanged, and devotion finds expression
+    in many forms.
+  </div>
+</section>
+
+<section id="evening">
+  <h2>How the Evening Unfolds</h2>
+  <p class="caption">
+    Designed to flow gently from dusk into night — unhurried and immersive.
+  </p>
+  <div class="evening">
+    🪔 <strong>Deepa Prajwalana</strong><br>
+    A ceremonial opening as the evening begins<br><br>
+
+    🎤 <strong>Spiritual Open Mic</strong><br>
+    Young voices share talent, thought and faith<br><br>
+
+    🎶 <strong>Cultural Performances</strong><br>
+    Music, dance, drama and storytelling<br><br>
+
+    🏮 <strong>Carnival Walk</strong><br>
+    Stalls, food, books and conversations<br><br>
+
+    🌙 <strong>Closing Bhajans</strong><br>
+    Collective singing and shared silence
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Temple & Carnival Moments</h2>
+  <p class="caption">
+    Visuals that capture the spirit — light, devotion, people and presence.
+  </p>
+
+  <div class="image-block">
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1595760928031-9c47d8c5a3f2">
+      <p>Temple lamps glowing at dusk</p>
+    </div>
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1600431521340-491eca880813">
+      <p>Evening prayers and quiet devotion</p>
+    </div>
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1545153996-eddc8d74c9e5">
+      <p>Community gathering and celebration</p>
+    </div>
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1600275669283-4bf3d0f2f9d4">
+      <p>Lights, culture and shared moments</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Stay Connected</h2>
+  <p class="caption">
+    Follow along for updates, announcements and behind-the-scenes moments.
+  </p>
+  <div class="card">
+    <a class="btn" href="https://www.instagram.com/yuvatma_mysuru" target="_blank">
+      Follow @yuvatma_mysuru
+    </a>
+  </div>
+</section>
+
+<footer>
+  Madhwa Carnival • An evening to remember
+  <em>ಬನ್ನಿ • ಸೇರಿ • ಸಂಭ್ರಮಿಸೋಣ</em>
+</footer>
+
+</body>
+</html>
